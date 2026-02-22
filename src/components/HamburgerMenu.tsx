@@ -7,9 +7,9 @@ import {
   Bike,
 } from "lucide-react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
-import TodoList from "./TodoList";
-import AlternativeList from "./AlternativeList";
-import ImportantNotes from "./ImportantNotes";
+import TodoList from "./TodoList.tsx";
+import AlternativeList from "./AlternativeList.tsx";
+import ImportantNotes from "./ImportantNotes.tsx";
 
 interface Props {
   onClose: () => void;

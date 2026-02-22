@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { LazyMotion, domAnimation, AnimatePresence } from "framer-motion";
-import HamburgerMenu from "./HamburgerMenu";
+import HamburgerMenu from "./HamburgerMenu.tsx";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
