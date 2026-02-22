@@ -4,18 +4,60 @@ export default function Hero() {
   return (
     <LazyMotion features={domAnimation}>
       <section className="relative flex flex-col items-center justify-center min-h-svh overflow-hidden bg-stone-50 px-6 pt-[env(safe-area-inset-top)]">
-        {/* Subtle dot grid */}
+        {/* Gold dot grid */}
         <div
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage:
-              "radial-gradient(circle, rgba(201,168,76,0.25) 1px, transparent 1px)",
+              "radial-gradient(circle, rgba(201,168,76,0.5) 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
         />
 
-        {/* Soft glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 h-75 rounded-full bg-gold/10 blur-[100px]" />
+        {/* Main gold glow — center */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-gold/15 blur-[90px]" />
+        {/* Secondary glow — bottom right */}
+        <div className="absolute bottom-1/4 right-0 w-52 h-52 rounded-full bg-gold/10 blur-[70px]" />
+        {/* Tertiary glow — top left */}
+        <div className="absolute top-1/4 -left-10 w-44 h-44 rounded-full bg-gold/8 blur-[60px]" />
+
+        {/* Corner frame — top left */}
+        <div className="absolute top-8 left-6 w-10 h-10 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-px bg-gold/50" />
+          <div className="absolute top-0 left-0 w-px h-full bg-gold/50" />
+        </div>
+        {/* Corner frame — top right */}
+        <div className="absolute top-8 right-6 w-10 h-10 pointer-events-none">
+          <div className="absolute top-0 right-0 w-full h-px bg-gold/50" />
+          <div className="absolute top-0 right-0 w-px h-full bg-gold/50" />
+        </div>
+        {/* Corner frame — bottom left */}
+        <div className="absolute bottom-16 left-6 w-10 h-10 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gold/50" />
+          <div className="absolute bottom-0 left-0 w-px h-full bg-gold/50" />
+        </div>
+        {/* Corner frame — bottom right */}
+        <div className="absolute bottom-16 right-6 w-10 h-10 pointer-events-none">
+          <div className="absolute bottom-0 right-0 w-full h-px bg-gold/50" />
+          <div className="absolute bottom-0 right-0 w-px h-full bg-gold/50" />
+        </div>
+
+        {/* Floating gold diamond */}
+        <motion.div
+          animate={{ y: [0, -8, 0], opacity: [0.4, 0.7, 0.4] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[18%] right-[14%] w-2 h-2 bg-gold/60 rotate-45"
+        />
+        <motion.div
+          animate={{ y: [0, 6, 0], opacity: [0.3, 0.6, 0.3] }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="absolute bottom-[28%] left-[12%] w-1.5 h-1.5 bg-gold/50 rotate-45"
+        />
 
         {/* Content */}
         <div className="relative z-10 text-center">
