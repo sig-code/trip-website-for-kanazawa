@@ -1,9 +1,69 @@
 import { motion, LazyMotion, domAnimation } from "framer-motion";
 
+// Pre-computed gold leaf particle data (stable across renders)
+const LEAVES = [
+  { id: 0,  x: "8%",  delay: 0.0, dur: 9,  w: 20, h: 5, spin: 480,  dx: 25 },
+  { id: 1,  x: "18%", delay: 1.4, dur: 11, w: 14, h: 4, spin: -360, dx: -18 },
+  { id: 2,  x: "30%", delay: 0.6, dur: 8,  w: 22, h: 6, spin: 600,  dx: 30 },
+  { id: 3,  x: "42%", delay: 2.1, dur: 10, w: 12, h: 3, spin: -480, dx: -12 },
+  { id: 4,  x: "55%", delay: 0.3, dur: 12, w: 18, h: 5, spin: 360,  dx: 20 },
+  { id: 5,  x: "67%", delay: 1.8, dur: 9,  w: 24, h: 6, spin: -540, dx: -28 },
+  { id: 6,  x: "78%", delay: 0.9, dur: 11, w: 16, h: 4, spin: 420,  dx: 15 },
+  { id: 7,  x: "88%", delay: 2.5, dur: 8,  w: 10, h: 3, spin: -300, dx: -10 },
+  { id: 8,  x: "12%", delay: 3.2, dur: 10, w: 20, h: 5, spin: 540,  dx: 22 },
+  { id: 9,  x: "25%", delay: 4.0, dur: 9,  w: 15, h: 4, spin: -420, dx: -20 },
+  { id: 10, x: "38%", delay: 1.1, dur: 13, w: 26, h: 7, spin: 360,  dx: 35 },
+  { id: 11, x: "50%", delay: 3.7, dur: 8,  w: 13, h: 3, spin: -600, dx: -15 },
+  { id: 12, x: "62%", delay: 0.4, dur: 11, w: 19, h: 5, spin: 480,  dx: 18 },
+  { id: 13, x: "74%", delay: 2.8, dur: 10, w: 11, h: 3, spin: -360, dx: -25 },
+  { id: 14, x: "83%", delay: 1.6, dur: 9,  w: 22, h: 6, spin: 300,  dx: 12 },
+  { id: 15, x: "3%",  delay: 4.5, dur: 12, w: 17, h: 4, spin: -480, dx: -8  },
+  { id: 16, x: "92%", delay: 0.7, dur: 10, w: 14, h: 4, spin: 540,  dx: 20 },
+  { id: 17, x: "46%", delay: 3.0, dur: 8,  w: 21, h: 5, spin: -300, dx: -30 },
+];
+
+function GoldLeaf({ x, delay, dur, w, h, spin, dx }: (typeof LEAVES)[0]) {
+  return (
+    <motion.div
+      style={{
+        position: "absolute",
+        top: -20,
+        left: x,
+        width: w,
+        height: h,
+        borderRadius: 1,
+        background:
+          "linear-gradient(105deg, rgba(232,201,106,0.9) 0%, rgba(201,168,76,0.7) 40%, rgba(244,220,130,0.95) 60%, rgba(201,168,76,0.6) 100%)",
+        boxShadow: "0 1px 3px rgba(201,168,76,0.3)",
+      }}
+      initial={{ y: -20, x: 0, rotate: 0, opacity: 0 }}
+      animate={{
+        y: [0, 900],
+        x: [0, dx * 0.4, dx * -0.2, dx],
+        rotate: [0, spin * 0.3, spin * 0.7, spin],
+        opacity: [0, 0.75, 0.8, 0.7, 0],
+      }}
+      transition={{
+        duration: dur,
+        delay,
+        repeat: Infinity,
+        ease: "linear",
+        times: [0, 0.05, 0.8, 1],
+      }}
+    />
+  );
+}
+
 export default function Hero() {
   return (
     <LazyMotion features={domAnimation}>
       <section className="relative flex flex-col items-center justify-center min-h-svh overflow-hidden bg-stone-50 px-6 pt-[env(safe-area-inset-top)]">
+
+        {/* Gold leaf particles */}
+        {LEAVES.map((leaf) => (
+          <GoldLeaf key={leaf.id} {...leaf} />
+        ))}
+
         {/* Gold dot grid */}
         <div
           className="absolute inset-0 opacity-30"
