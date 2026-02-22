@@ -35,10 +35,11 @@ export default function Header() {
 
           <button
             onClick={() => setMenuOpen(true)}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-gold text-white active:scale-95 transition-transform shadow-md"
+            className="w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform shadow-md"
+            style={{ backgroundColor: "#c9a84c", color: "#ffffff" }}
             aria-label="メニューを開く"
           >
-            <Menu size={20} strokeWidth={2.5} />
+            <Menu size={20} strokeWidth={2.5} color="#ffffff" />
           </button>
         </div>
       </header>
