@@ -150,7 +150,7 @@ export const schedule: DaySchedule[] = [
   {
     day: 2,
     date: "2月24日（火・平日）",
-    dayOfWeek: "⚠️ 21世紀美術館(展覧会)・鈴木大拙館・ゴーシュが休み",
+    dayOfWeek: "⚠️ 21世紀美術館・鈴木大拙館・ゴーシュが休み",
     items: [
       {
         id: "d2-01",
@@ -165,19 +165,10 @@ export const schedule: DaySchedule[] = [
         time: "09:00",
         title: "兼六園 朝散歩",
         subtitle: "2月下旬は梅の見頃の可能性あり🌸",
-        duration: "60〜75分",
+        duration: "75〜90分",
         transport: "machinori",
-        note: "大人320円。日本三名園のひとつ",
+        note: "大人320円。日本三名園のひとつ。ゆっくり歩いて隅々まで 🌸",
         isHighlight: true,
-      },
-      {
-        id: "d2-03",
-        time: "10:15",
-        title: "21世紀美術館 交流ゾーン",
-        subtitle: "屋外作品鑑賞（無料）",
-        duration: "30分",
-        transport: "walk",
-        note: "展覧会ゾーンは本日休館。無料の屋外展示を楽しむ",
       },
       {
         id: "d2-04",
