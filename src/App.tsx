@@ -7,6 +7,18 @@ import GoldFall from "./components/GoldFall";
 function App() {
   return (
     <div className="min-h-screen bg-stone-50">
+      {/* Global dot grid */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          zIndex: 0,
+          backgroundImage:
+            "radial-gradient(circle, rgba(201,168,76,0.5) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          opacity: 0.25,
+        }}
+      />
       <GoldFall />
       <Header />
       <main>

@@ -4,16 +4,6 @@ export default function Hero() {
   return (
     <LazyMotion features={domAnimation}>
       <section className="relative flex flex-col items-center justify-center min-h-svh overflow-hidden bg-stone-50 px-6 pt-[env(safe-area-inset-top)]">
-        {/* Gold dot grid */}
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, rgba(201,168,76,0.5) 1px, transparent 1px)",
-            backgroundSize: "28px 28px",
-          }}
-        />
-
         {/* Main gold glow — center */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-gold/15 blur-[90px]" />
         {/* Secondary glow — bottom right */}
