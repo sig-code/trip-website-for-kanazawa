@@ -24,7 +24,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between px-5 h-14">
           <div className="flex items-center gap-2">
-            <div className="w-1.5 h-5 rounded-full bg-[#c9a84c]" />
+            <div className="w-1.5 h-5 rounded-full bg-gold" />
             <span
               className="text-white text-sm font-semibold tracking-wide"
               style={{ fontFamily: '"Noto Serif JP", serif' }}

@@ -28,11 +28,11 @@ export default function TodoList() {
         </span>
         <div className="flex-1 mx-3 h-1.5 bg-slate-700 rounded-full overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-[#c9a84c] to-[#e8c96a] rounded-full transition-all duration-500"
+            className="h-full bg-linear-to-r from-gold to-gold-light rounded-full transition-all duration-500"
             style={{ width: `${(doneCount / todos.length) * 100}%` }}
           />
         </div>
-        <span className="text-[#c9a84c] text-xs font-medium">
+        <span className="text-gold text-xs font-medium">
           {Math.round((doneCount / todos.length) * 100)}%
         </span>
       </div>
@@ -52,7 +52,7 @@ export default function TodoList() {
             onClick={() => toggle(todo.id)}
             className="flex items-start gap-3 w-full text-left active:opacity-70"
           >
-            <div className="mt-0.5 flex-shrink-0">
+            <div className="mt-0.5 shrink-0">
               {todo.done ? (
                 <CheckCircle2 size={18} className="text-emerald-400" />
               ) : todo.urgent ? (
@@ -87,7 +87,7 @@ export default function TodoList() {
                   href={todo.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-xs text-[#c9a84c]/70 active:opacity-70"
+                  className="flex items-center gap-1.5 text-xs text-gold/70 active:opacity-70"
                 >
                   <ExternalLink size={11} />
                   <span>サイトを開く</span>

@@ -4,8 +4,8 @@ import { alternatives } from "../data/alternatives";
 const categoryConfig = {
   "lunch-d1": {
     label: "1日目ランチ（メイン）",
-    color: "text-[#c9a84c]",
-    bg: "bg-[#c9a84c]/10 border-[#c9a84c]/25",
+    color: "text-gold",
+    bg: "bg-gold/10 border-gold/25",
   },
   "lunch-d1-alt": {
     label: "1日目ランチ（代替候補）",
@@ -110,10 +110,7 @@ export default function AlternativeList() {
                     )}
                     {alt.address && (
                       <div className="flex items-center gap-1.5">
-                        <MapPin
-                          size={10}
-                          className="text-slate-600 flex-shrink-0"
-                        />
+                        <MapPin size={10} className="text-slate-600 shrink-0" />
                         <span className="text-slate-500 text-xs">
                           {alt.address}
                         </span>
@@ -138,7 +135,7 @@ export default function AlternativeList() {
                           href={alt.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-xs text-[#c9a84c]/70 active:opacity-70"
+                          className="flex items-center gap-1.5 text-xs text-gold/70 active:opacity-70"
                         >
                           <ExternalLink size={11} />
                           <span>詳細</span>

@@ -69,7 +69,7 @@ export default function HamburgerMenu({ onClose }: Props) {
         </div>
 
         {/* Tabs */}
-        <div className="flex px-3 pt-3 pb-2 gap-1.5 flex-shrink-0 overflow-x-auto">
+        <div className="flex px-3 pt-3 pb-2 gap-1.5 shrink-0 overflow-x-auto">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             const active = activeTab === tab.id;
@@ -77,9 +77,9 @@ export default function HamburgerMenu({ onClose }: Props) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all flex-shrink-0 ${
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all shrink-0 ${
                   active
-                    ? "bg-[#c9a84c] text-[#0a1628]"
+                    ? "bg-gold text-[#0a1628]"
                     : "bg-slate-800 text-slate-400 active:bg-slate-700"
                 }`}
               >
@@ -162,7 +162,7 @@ function TransportSection() {
             rel="noopener noreferrer"
             className="flex items-center justify-between group active:opacity-70"
           >
-            <span className="text-[#c9a84c]/80 text-xs">{link.label}</span>
+            <span className="text-gold/80 text-xs">{link.label}</span>
             <span className="text-slate-600 text-xs">→</span>
           </a>
         ))}

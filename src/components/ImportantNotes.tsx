@@ -48,7 +48,7 @@ export default function ImportantNotes() {
                 </p>
               </div>
 
-              <div className="w-20 text-center flex-shrink-0">
+              <div className="w-20 text-center shrink-0">
                 <p className="text-xs">{info.day1.ok ? "✅" : "❌"}</p>
                 <p
                   className={`text-[10px] leading-tight mt-0.5 ${info.day1.ok ? "text-emerald-400/70" : "text-red-400/70"}`}
@@ -56,7 +56,7 @@ export default function ImportantNotes() {
                   {info.day1.note.replace("✅", "").replace("❌", "").trim()}
                 </p>
               </div>
-              <div className="w-20 text-center flex-shrink-0">
+              <div className="w-20 text-center shrink-0">
                 <p className="text-xs">{info.day2.ok ? "✅" : "❌"}</p>
                 <p
                   className={`text-[10px] leading-tight mt-0.5 ${info.day2.ok ? "text-emerald-400/70" : "text-red-400/70"}`}
@@ -71,7 +71,7 @@ export default function ImportantNotes() {
                 href={info.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1.5 inline-flex items-center gap-1 text-[10px] text-[#c9a84c]/60 active:opacity-70"
+                className="mt-1.5 inline-flex items-center gap-1 text-[10px] text-gold/60 active:opacity-70"
               >
                 <ExternalLink size={9} />
                 <span>一次ソース</span>

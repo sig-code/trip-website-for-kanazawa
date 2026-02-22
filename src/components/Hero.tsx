@@ -15,7 +15,7 @@ export default function Hero() {
         />
 
         {/* Glow orb */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-[#c9a84c]/10 blur-[80px]" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 h-75 rounded-full bg-gold/10 blur-[80px]" />
 
         {/* Content */}
         <div className="relative z-10 text-center">
@@ -23,7 +23,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-[#c9a84c] text-xs tracking-[0.35em] uppercase mb-4"
+            className="text-gold text-xs tracking-[0.35em] uppercase mb-4"
           >
             Kanazawa Trip 2026
           </motion.p>
@@ -42,7 +42,7 @@ export default function Hero() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="h-px bg-gradient-to-r from-transparent via-[#c9a84c] to-transparent my-5"
+            className="h-px bg-linear-to-r from-transparent via-gold to-transparent my-5"
           />
 
           <motion.div
@@ -65,7 +65,7 @@ export default function Hero() {
             {["1泊2日", "♥ 2人旅", "まちのり移動"].map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-3 py-1 rounded-full border border-[#c9a84c]/40 text-[#c9a84c]/80"
+                className="text-xs px-3 py-1 rounded-full border border-gold/40 text-gold/80"
               >
                 {tag}
               </span>
@@ -84,7 +84,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.4, repeat: Infinity }}
-            className="w-px h-8 bg-gradient-to-b from-[#c9a84c]/60 to-transparent"
+            className="w-px h-8 bg-linear-to-b from-gold/60 to-transparent"
           />
         </motion.div>
       </section>
