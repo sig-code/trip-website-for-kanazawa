@@ -6,7 +6,24 @@ import TimelineItem from "./TimelineItem";
 export default function Timeline() {
   return (
     <LazyMotion features={domAnimation}>
-      <section className="px-4 pt-2 pb-12">
+      {/* Ambient scroll gradient — fixed behind timeline */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none"
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 2,
+          background: [
+            "radial-gradient(ellipse 70% 50% at 15% 35%, rgba(201,168,76,0.07) 0%, transparent 65%)",
+            "radial-gradient(ellipse 60% 45% at 85% 65%, rgba(201,168,76,0.06) 0%, transparent 60%)",
+            "radial-gradient(ellipse 50% 40% at 50% 10%, rgba(244,218,110,0.05) 0%, transparent 55%)",
+            "radial-gradient(ellipse 55% 42% at 20% 85%, rgba(180,145,50,0.05) 0%, transparent 58%)",
+          ].join(", "),
+        }}
+      />
+
+      <section className="relative px-4 pt-2 pb-12" style={{ zIndex: 10 }}>
         {schedule.map((day) => (
           <div key={day.day} className="mb-10">
             {/* Day header */}
