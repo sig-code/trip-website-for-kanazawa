@@ -123,7 +123,7 @@ export const schedule: DaySchedule[] = [
         subtitle: "念願の鰤しゃぶ🐟",
         duration: "90〜120分",
         transport: "machinori",
-        link: "https://kawabatasengyo.owst.jp/",
+        link: "https://tabelog.com/ishikawa/A1701/A170101/17010917/",
         address: "木倉町2-4 西野ビル1F",
         phone: "076-223-0128",
         warning: "この日（月祝）の営業を電話確認済み（17時〜）",
