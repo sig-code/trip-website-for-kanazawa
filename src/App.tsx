@@ -2,10 +2,12 @@ import "./index.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Timeline from "./components/Timeline";
+import GoldFall from "./components/GoldFall";
 
 function App() {
   return (
     <div className="min-h-screen bg-stone-50">
+      <GoldFall />
       <Header />
       <main>
         <Hero />

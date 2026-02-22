@@ -1,6 +1,6 @@
 export interface Alternative {
   id: string;
-  category: "lunch-d1" | "lunch-d1-alt" | "lunch-d2" | "cafe-d2";
+  category: "lunch-d1" | "lunch-d1-alt" | "lunch-d2" | "cafe-d2" | "dinner-d2";
   name: string;
   address?: string;
   phone?: string;
@@ -97,5 +97,40 @@ export const alternatives: Alternative[] = [
     closed: "水曜 → 火曜OK",
     budget: "1人800〜1,200円",
     note: "ハンドドリップコーヒー専門。2階から茶屋街の景色が見える開放的な空間。コーヒー好きならこっち☕",
+  },
+  // 2日目夕飯候補
+  {
+    id: "a9",
+    category: "dinner-d2",
+    name: "おでん居酒屋 三幸",
+    address: "片町1-10-3",
+    phone: "076-222-6117",
+    hours: "17:00〜（要確認）",
+    closed: "不定休",
+    budget: "1人2,000〜3,500円",
+    note: "金沢おでんの名店。地元民にも愛される老舗。片町エリアなので17時前後の早い時間が狙い目",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17002725/",
+  },
+  {
+    id: "a10",
+    category: "dinner-d2",
+    name: "金沢かつぞう 金沢駅あんと店",
+    address: "木ノ新保町1-1 金沢百番街あんと",
+    phone: "076-216-5630",
+    hours: "11:00〜21:00（LO 20:30）",
+    budget: "1人1,500〜2,500円",
+    note: "金沢駅直結で新幹線前にアクセス◎。金沢の地魚を使ったこだわりのとんかつ",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17013227/",
+  },
+  {
+    id: "a11",
+    category: "dinner-d2",
+    name: "魚菜屋（ぎょさいや）",
+    address: "木ノ新保町1-1 金沢百番街あんと",
+    phone: "076-233-2217",
+    hours: "11:00〜21:00（LO 20:00）",
+    budget: "1人2,000〜3,500円",
+    note: "駅直結あんと内。地元食材の海鮮・加賀野菜を使った定食。新幹線前にさっと食べるのに便利",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17005290/",
   },
 ];

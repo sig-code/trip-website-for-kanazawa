@@ -22,6 +22,11 @@ const categoryConfig = {
     color: "text-violet-600",
     bg: "bg-violet-50 border-violet-200",
   },
+  "dinner-d2": {
+    label: "2日目夕飯候補",
+    color: "text-rose-600",
+    bg: "bg-rose-50 border-rose-200",
+  },
 } as const;
 
 const categoryOrder = [
@@ -29,6 +34,7 @@ const categoryOrder = [
   "lunch-d1-alt",
   "lunch-d2",
   "cafe-d2",
+  "dinner-d2",
 ] as const;
 
 export default function AlternativeList() {
