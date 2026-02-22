@@ -34,7 +34,7 @@ export const initialTodos: Todo[] = [
   },
   {
     id: "t5",
-    text: "21世紀美術館スイミングプールの当日予約方法を確認（当日9:00から）",
+    text: "21世紀美術館スイミングプールを予約する（当日9:00から）",
     done: true,
     link: "https://www.kanazawa21.jp/data_list.php?g=120&d=1",
   },

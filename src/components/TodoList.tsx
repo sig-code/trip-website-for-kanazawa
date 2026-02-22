@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Phone,
   ExternalLink,
@@ -7,9 +7,32 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { initialTodos } from "../data/todos";
+import type { Todo } from "../data/todos";
+
+const STORAGE_KEY = "kanazawa_trip_todos";
 
 export default function TodoList() {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState<Todo[]>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return initialTodos.map((initialTodo) => {
+          const savedTodo = parsed.find((t: Todo) => t.id === initialTodo.id);
+          return savedTodo
+            ? { ...initialTodo, done: savedTodo.done }
+            : initialTodo;
+        });
+      } catch (e) {
+        console.error("Failed to parse todos from localStorage", e);
+      }
+    }
+    return initialTodos;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+  }, [todos]);
 
   const toggle = (id: string) => {
     setTodos((prev) =>

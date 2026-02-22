@@ -5,23 +5,26 @@ import {
   UtensilsCrossed,
   AlertTriangle,
   Bike,
+  MapPin,
 } from "lucide-react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import TodoList from "./TodoList.tsx";
 import AlternativeList from "./AlternativeList.tsx";
 import ImportantNotes from "./ImportantNotes.tsx";
+import DestinationsList from "./DestinationsList.tsx";
 
 interface Props {
   onClose: () => void;
 }
 
-type TabId = "todo" | "alt" | "notes" | "transport";
+type TabId = "destinations" | "todo" | "alt" | "notes" | "transport";
 
 const tabs: {
   id: TabId;
   label: string;
   icon: React.ComponentType<{ size?: number }>;
 }[] = [
+  { id: "destinations", label: "行き先一覧", icon: MapPin },
   { id: "todo", label: "TODO", icon: CheckSquare },
   { id: "alt", label: "代替候補", icon: UtensilsCrossed },
   { id: "notes", label: "定休日", icon: AlertTriangle },
@@ -29,7 +32,7 @@ const tabs: {
 ];
 
 export default function HamburgerMenu({ onClose }: Props) {
-  const [activeTab, setActiveTab] = useState<TabId>("todo");
+  const [activeTab, setActiveTab] = useState<TabId>("destinations");
 
   return (
     <LazyMotion features={domAnimation}>
@@ -92,6 +95,7 @@ export default function HamburgerMenu({ onClose }: Props) {
 
         {/* Content */}
         <div className="flex-1 overflow-y-auto px-4 pb-[calc(env(safe-area-inset-bottom)+2rem)]">
+          {activeTab === "destinations" && <DestinationsList />}
           {activeTab === "todo" && <TodoList />}
           {activeTab === "alt" && <AlternativeList />}
           {activeTab === "notes" && <ImportantNotes />}
