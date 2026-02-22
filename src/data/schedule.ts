@@ -130,12 +130,12 @@ export const schedule: DaySchedule[] = [
       },
       {
         id: "d1-10",
-        time: "19:00",
-        title: "21世紀美術館 夜の屋外展示",
-        subtitle: "交流ゾーン＋ライトアップ",
+        time: "18:30〜19:30",
+        title: "FREE TIME 🌙",
+        subtitle: "夜の金沢をふたりで自由に",
         duration: "30分",
-        transport: "walk",
-        note: "夜のライトアップが幻想的 ✨ 交流ゾーンは無料",
+        transport: "none",
+        note: "散歩・スイーツ・お土産探しなど気の向くままに ✨",
       },
       {
         id: "d1-11",
