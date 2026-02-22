@@ -18,7 +18,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-top ${
           scrolled
-            ? "bg-[#0a1628]/90 backdrop-blur-md shadow-lg shadow-black/30"
+            ? "bg-white/95 backdrop-blur-md shadow-sm shadow-black/5"
             : "bg-transparent"
         }`}
       >
@@ -26,7 +26,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-5 rounded-full bg-gold" />
             <span
-              className="text-white text-sm font-semibold tracking-wide"
+              className="text-slate-800 text-sm font-semibold tracking-wide"
               style={{ fontFamily: '"Noto Serif JP", serif' }}
             >
               金沢の旅
@@ -35,7 +35,7 @@ export default function Header() {
 
           <button
             onClick={() => setMenuOpen(true)}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/60 border border-slate-700/50 text-slate-300 active:scale-95 transition-transform"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 border border-slate-200 text-slate-700 active:scale-95 transition-transform"
             aria-label="メニューを開く"
           >
             <Menu size={18} />

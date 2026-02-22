@@ -26,7 +26,7 @@ export default function TodoList() {
         <span className="text-slate-400 text-xs">
           {doneCount} / {todos.length} 完了
         </span>
-        <div className="flex-1 mx-3 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+          <div className="flex-1 mx-3 h-1.5 bg-slate-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-linear-to-r from-gold to-gold-light rounded-full transition-all duration-500"
             style={{ width: `${(doneCount / todos.length) * 100}%` }}
@@ -42,10 +42,10 @@ export default function TodoList() {
           key={todo.id}
           className={`rounded-xl p-4 border transition-all ${
             todo.urgent && !todo.done
-              ? "bg-red-500/8 border-red-500/25"
+              ? "bg-red-50 border-red-200"
               : todo.done
-                ? "bg-slate-800/20 border-slate-700/20 opacity-60"
-                : "bg-slate-800/40 border-slate-700/30"
+                ? "bg-slate-50 border-slate-200 opacity-70"
+                : "bg-white border-slate-200"
           }`}
         >
           <button
@@ -58,12 +58,12 @@ export default function TodoList() {
               ) : todo.urgent ? (
                 <AlertCircle size={18} className="text-red-400" />
               ) : (
-                <Circle size={18} className="text-slate-600" />
+                <Circle size={18} className="text-slate-400" />
               )}
             </div>
             <span
               className={`text-sm leading-relaxed ${
-                todo.done ? "line-through text-slate-500" : "text-slate-200"
+                todo.done ? "line-through text-slate-400" : "text-slate-800"
               }`}
             >
               {todo.text}

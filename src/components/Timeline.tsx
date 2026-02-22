@@ -15,7 +15,7 @@ export default function Timeline() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-20px" }}
               transition={{ duration: 0.5 }}
-              className="sticky top-0 z-20 py-3 mb-5 bg-night/95 backdrop-blur-sm"
+              className="sticky top-0 z-20 py-3 mb-5 bg-stone-50/95 backdrop-blur-sm"
             >
               <div className="flex items-center gap-3">
                 {/* Day badge */}

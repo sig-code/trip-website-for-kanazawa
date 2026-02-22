@@ -49,19 +49,19 @@ export default function HamburgerMenu({ onClose }: Props) {
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ type: "spring", damping: 28, stiffness: 300 }}
-        className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm bg-[#0d1e35] shadow-2xl flex flex-col"
+        className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm bg-white shadow-2xl flex flex-col"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-3 border-b border-slate-700/50">
+        <div className="flex items-center justify-between px-5 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-3 border-b border-slate-200">
           <span
-            className="text-white text-base font-semibold"
+            className="text-slate-800 text-base font-semibold"
             style={{ fontFamily: '"Noto Serif JP", serif' }}
           >
             詳細情報
           </span>
           <button
             onClick={onClose}
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-800 text-slate-400 active:scale-95 transition-transform"
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 active:scale-95 transition-transform"
             aria-label="閉じる"
           >
             <X size={18} />
@@ -79,8 +79,8 @@ export default function HamburgerMenu({ onClose }: Props) {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all shrink-0 ${
                   active
-                    ? "bg-gold text-[#0a1628]"
-                    : "bg-slate-800 text-slate-400 active:bg-slate-700"
+                    ? "bg-gold text-white"
+                    : "bg-slate-100 text-slate-600 active:bg-slate-200"
                 }`}
               >
                 <Icon size={12} />
@@ -106,41 +106,41 @@ function TransportSection() {
   return (
     <div className="pt-4 space-y-4">
       {/* Main recommendation */}
-      <div className="bg-sky-500/10 border border-sky-500/25 rounded-xl p-4">
+      <div className="bg-sky-50 border border-sky-200 rounded-xl p-4">
         <div className="flex items-center gap-2 mb-2">
-          <Bike size={16} className="text-sky-400" />
-          <span className="text-sky-300 font-semibold text-sm">
+          <Bike size={16} className="text-sky-600" />
+          <span className="text-sky-700 font-semibold text-sm">
             まちのり（シェアサイクル）推奨
           </span>
         </div>
-        <p className="text-slate-300 text-xs leading-relaxed">
+        <p className="text-slate-600 text-xs leading-relaxed">
           天気は晴れ予報🌤
           主要観光地は半径約2km以内に集中。バスに4回乗らないため1日フリー乗車券（800円）よりも安い。
         </p>
       </div>
 
       {/* Cost comparison */}
-      <div className="bg-slate-800/40 rounded-xl p-4 space-y-3">
-        <p className="text-white text-sm font-semibold">料金比較</p>
-        <div className="flex justify-between items-center py-2 border-b border-slate-700/50">
+      <div className="bg-slate-100/80 rounded-xl p-4 space-y-3">
+        <p className="text-slate-800 text-sm font-semibold">料金比較</p>
+        <div className="flex justify-between items-center py-2 border-b border-slate-200">
           <div>
-            <p className="text-slate-300 text-sm">バス1日フリー乗車券</p>
+            <p className="text-slate-700 text-sm">バス1日フリー乗車券</p>
             <p className="text-slate-500 text-xs">バス乗り放題・施設割引あり</p>
           </div>
-          <span className="text-white font-bold text-sm">800円/日</span>
+          <span className="text-slate-800 font-bold text-sm">800円/日</span>
         </div>
         <div className="flex justify-between items-center py-2">
           <div>
-            <p className="text-sky-300 text-sm">まちのり（1回会員）</p>
+            <p className="text-sky-600 text-sm">まちのり（1回会員）</p>
             <p className="text-slate-500 text-xs">2人 × 165円 × 2〜3回</p>
           </div>
-          <span className="text-sky-300 font-bold text-sm">660〜990円</span>
+          <span className="text-sky-600 font-bold text-sm">660〜990円</span>
         </div>
       </div>
 
       {/* Links */}
-      <div className="bg-slate-800/40 rounded-xl p-4 space-y-3">
-        <p className="text-white text-sm font-semibold">公式リンク</p>
+      <div className="bg-slate-100/80 rounded-xl p-4 space-y-3">
+        <p className="text-slate-800 text-sm font-semibold">公式リンク</p>
         {[
           {
             label: "まちのり 料金・案内",
@@ -169,8 +169,8 @@ function TransportSection() {
       </div>
 
       {/* Note */}
-      <div className="bg-amber-500/8 border border-amber-500/20 rounded-xl p-4">
-        <p className="text-amber-300 text-xs leading-relaxed">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+        <p className="text-amber-700 text-xs leading-relaxed">
           ⚠️ 金沢のバスはSuicaが使えない路線があります。
           バスを使う場合は小銭か交通系ICカードを事前に確認してください。
         </p>

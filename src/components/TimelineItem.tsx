@@ -21,11 +21,11 @@ const transportConfig: Record<
     color: string;
   }
 > = {
-  walk: { icon: Footprints, label: "徒歩", color: "text-emerald-400" },
-  machinori: { icon: Bike, label: "まちのり", color: "text-sky-400" },
-  bus: { icon: Bus, label: "バス", color: "text-violet-400" },
-  train: { icon: Train, label: "電車", color: "text-orange-400" },
-  none: { icon: Minus, label: "—", color: "text-slate-600" },
+  walk: { icon: Footprints, label: "徒歩", color: "text-emerald-600" },
+  machinori: { icon: Bike, label: "まちのり", color: "text-sky-600" },
+  bus: { icon: Bus, label: "バス", color: "text-violet-600" },
+  train: { icon: Train, label: "電車", color: "text-orange-500" },
+  none: { icon: Minus, label: "—", color: "text-slate-400" },
 };
 
 interface Props {
@@ -57,12 +57,12 @@ export default function TimelineItem({ item, index, isLast }: Props) {
               ? "bg-gold shadow-[0_0_8px_rgba(201,168,76,0.6)]"
               : isHighlight
                 ? "bg-gold/70"
-                : "bg-slate-600"
+                : "bg-slate-300"
           }`}
         />
         {/* Line */}
         {!isLast && (
-          <div className="w-px flex-1 mt-1 bg-linear-to-b from-slate-600 to-slate-700/30 min-h-8" />
+          <div className="w-px flex-1 mt-1 bg-linear-to-b from-slate-200 to-slate-100/0 min-h-8" />
         )}
       </div>
 
@@ -70,10 +70,10 @@ export default function TimelineItem({ item, index, isLast }: Props) {
       <div
         className={`flex-1 mb-5 rounded-xl p-4 border transition-all ${
           isMandatory
-            ? "bg-gold/8 border-gold/30"
+            ? "bg-amber-50/80 border-amber-200"
             : isHighlight
-              ? "bg-slate-800/60 border-slate-700/50"
-              : "bg-slate-800/30 border-slate-700/20"
+              ? "bg-slate-50 border-slate-200"
+              : "bg-white border-slate-200"
         }`}
       >
         {/* Header row */}
@@ -103,11 +103,11 @@ export default function TimelineItem({ item, index, isLast }: Props) {
         </div>
 
         {/* Title */}
-        <h3 className="text-white text-base font-semibold leading-snug">
+        <h3 className="text-slate-800 text-base font-semibold leading-snug">
           {item.title}
         </h3>
         {item.subtitle && (
-          <p className="text-slate-400 text-sm mt-0.5">{item.subtitle}</p>
+          <p className="text-slate-500 text-sm mt-0.5">{item.subtitle}</p>
         )}
 
         {/* Duration */}
@@ -117,12 +117,12 @@ export default function TimelineItem({ item, index, isLast }: Props) {
 
         {/* Warning */}
         {item.warning && (
-          <div className="mt-2 flex gap-1.5 items-start bg-amber-500/10 border border-amber-500/20 rounded-lg px-3 py-2">
+          <div className="mt-2 flex gap-1.5 items-start bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
             <AlertTriangle
               size={13}
-              className="text-amber-400 shrink-0 mt-0.5"
+              className="text-amber-600 shrink-0 mt-0.5"
             />
-            <p className="text-amber-300 text-xs leading-relaxed">
+            <p className="text-amber-700 text-xs leading-relaxed">
               {item.warning}
             </p>
           </div>

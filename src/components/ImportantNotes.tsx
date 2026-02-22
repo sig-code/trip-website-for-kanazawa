@@ -4,8 +4,8 @@ import { closedInfoList } from "../data/notes";
 export default function ImportantNotes() {
   return (
     <div className="pt-4 space-y-4">
-      <div className="bg-amber-500/10 border border-amber-500/25 rounded-xl p-4 mb-2">
-        <p className="text-amber-300 text-xs leading-relaxed">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-2">
+        <p className="text-amber-700 text-xs leading-relaxed">
           ⚠️ 2/23（月祝）→ 翌平日の振替休館に注意。
           <br />
           2/24（火）は21世紀美術館（展覧会）・鈴木大拙館・ゴーシュが全て休みです。
@@ -16,11 +16,11 @@ export default function ImportantNotes() {
       <div className="flex items-center gap-4 px-1">
         <div className="flex items-center gap-1.5">
           <span className="text-base">✅</span>
-          <span className="text-slate-400 text-xs">営業</span>
+          <span className="text-slate-500 text-xs">営業</span>
         </div>
         <div className="flex items-center gap-1.5">
           <span className="text-base">❌</span>
-          <span className="text-slate-400 text-xs">休み</span>
+          <span className="text-slate-500 text-xs">休み</span>
         </div>
       </div>
 
@@ -36,11 +36,11 @@ export default function ImportantNotes() {
         {closedInfoList.map((info) => (
           <div
             key={info.name}
-            className="bg-slate-800/40 border border-slate-700/30 rounded-xl px-3 py-3"
+            className="bg-white border border-slate-200 rounded-xl px-3 py-3"
           >
             <div className="flex items-start gap-2">
               <div className="flex-1 min-w-0">
-                <p className="text-slate-200 text-xs font-medium leading-snug">
+                <p className="text-slate-800 text-xs font-medium leading-snug">
                   {info.name}
                 </p>
                 <p className="text-slate-600 text-[10px] mt-0.5">

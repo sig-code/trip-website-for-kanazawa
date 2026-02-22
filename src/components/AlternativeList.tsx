@@ -5,22 +5,22 @@ const categoryConfig = {
   "lunch-d1": {
     label: "1日目ランチ（メイン）",
     color: "text-gold",
-    bg: "bg-gold/10 border-gold/25",
+    bg: "bg-amber-50 border-amber-200",
   },
   "lunch-d1-alt": {
     label: "1日目ランチ（代替候補）",
-    color: "text-orange-400",
-    bg: "bg-orange-500/8 border-orange-500/20",
+    color: "text-orange-500",
+    bg: "bg-orange-50 border-orange-200",
   },
   "lunch-d2": {
     label: "2日目ランチ",
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/8 border-emerald-500/20",
+    color: "text-emerald-600",
+    bg: "bg-emerald-50 border-emerald-200",
   },
   "cafe-d2": {
     label: "2日目カフェ候補",
-    color: "text-violet-400",
-    bg: "bg-violet-500/8 border-violet-500/20",
+    color: "text-violet-600",
+    bg: "bg-violet-50 border-violet-200",
   },
 } as const;
 
@@ -61,7 +61,7 @@ export default function AlternativeList() {
                 >
                   {/* Name row */}
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <h4 className="text-white text-sm font-semibold leading-snug">
+                    <h4 className="text-slate-800 text-sm font-semibold leading-snug">
                       {alt.name}
                     </h4>
                     {idx === 0 && category !== "lunch-d1-alt" && (
@@ -87,14 +87,14 @@ export default function AlternativeList() {
                       </span>
                     )}
                     {alt.budget && (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-700/60 text-slate-400">
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">
                         {alt.budget}
                       </span>
                     )}
                   </div>
 
                   {/* Note */}
-                  <p className="text-slate-400 text-xs leading-relaxed">
+                  <p className="text-slate-600 text-xs leading-relaxed">
                     {alt.note}
                   </p>
 
@@ -110,7 +110,7 @@ export default function AlternativeList() {
                     )}
                     {alt.address && (
                       <div className="flex items-center gap-1.5">
-                        <MapPin size={10} className="text-slate-600 shrink-0" />
+                        <MapPin size={10} className="text-slate-400 shrink-0" />
                         <span className="text-slate-500 text-xs">
                           {alt.address}
                         </span>

@@ -3,19 +3,19 @@ import { motion, LazyMotion, domAnimation } from "framer-motion";
 export default function Hero() {
   return (
     <LazyMotion features={domAnimation}>
-      <section className="relative flex flex-col items-center justify-center min-h-svh overflow-hidden bg-[#0a1628] px-6 pt-[env(safe-area-inset-top)]">
-        {/* Background grid */}
+      <section className="relative flex flex-col items-center justify-center min-h-svh overflow-hidden bg-stone-50 px-6 pt-[env(safe-area-inset-top)]">
+        {/* Subtle dot grid */}
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-40"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(201,168,76,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.3) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
+              "radial-gradient(circle, rgba(201,168,76,0.25) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
           }}
         />
 
-        {/* Glow orb */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 h-75 rounded-full bg-gold/10 blur-[80px]" />
+        {/* Soft glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 h-75 rounded-full bg-gold/10 blur-[100px]" />
 
         {/* Content */}
         <div className="relative z-10 text-center">
@@ -32,7 +32,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="font-serif text-5xl font-bold text-white leading-tight mb-2"
+            className="text-5xl font-bold text-slate-800 leading-tight mb-2"
             style={{ fontFamily: '"Noto Serif JP", serif' }}
           >
             金沢の旅
@@ -50,7 +50,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            <p className="text-slate-300 text-lg mb-1">
+            <p className="text-slate-700 text-lg mb-1">
               2026年2月23日（月・祝）
             </p>
             <p className="text-slate-400 text-sm">〜 24日（火）</p>
@@ -62,10 +62,10 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 1.2 }}
             className="mt-6 flex gap-3 justify-center flex-wrap"
           >
-            {["1泊2日", "♥ 2人旅", "まちのり移動"].map((tag) => (
+            {["1泊2日"].map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-3 py-1 rounded-full border border-gold/40 text-gold/80"
+                className="text-xs px-3 py-1 rounded-full border border-gold/40 text-gold/90 bg-gold/5"
               >
                 {tag}
               </span>
@@ -80,7 +80,7 @@ export default function Hero() {
           transition={{ delay: 1.6 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-slate-500 text-xs tracking-widest">SCROLL</span>
+          <span className="text-slate-400 text-xs tracking-widest">SCROLL</span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.4, repeat: Infinity }}
