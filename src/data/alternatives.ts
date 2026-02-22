@@ -45,6 +45,7 @@ export const alternatives: Alternative[] = [
     address: "百番街あんと西2F",
     budget: "1人2,000〜3,000円",
     note: "待ち時間が短め。金沢駅直結で便利",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17001242/",
   },
   {
     id: "a4",
@@ -53,6 +54,7 @@ export const alternatives: Alternative[] = [
     address: "百番街あんと内",
     budget: "1人2,500〜4,000円",
     note: "回転寿司御三家のひとつ",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17005515/",
   },
   {
     id: "a5",
@@ -61,6 +63,7 @@ export const alternatives: Alternative[] = [
     address: "クロスゲート金沢2F",
     budget: "1人2,500〜4,000円",
     note: "極みランチあり",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17014774/",
   },
   // 2日目ランチ
   {

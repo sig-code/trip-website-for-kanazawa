@@ -11,19 +11,20 @@ export const initialTodos: Todo[] = [
   {
     id: "t1",
     text: "澤ノ屋に電話して2/24（火）ランチのどぐろ丼を予約",
-    done: false,
-    urgent: true,
+    done: true,
     phone: "076-255-0009",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17008213/",
   },
   {
     id: "t2",
     text: "川端鮮魚店 本店の2/23（月祝）17時〜営業を電話確認",
     done: true,
     phone: "076-223-0128",
+    link: "https://tabelog.com/ishikawa/A1701/A170101/17010917/",
   },
   {
     id: "t3",
-    text: "天気予報チェック → 晴れのためまちのりで確定",
+    text: "天気予報チェック",
     done: true,
   },
   {
