@@ -37,6 +37,7 @@ export const schedule: DaySchedule[] = [
         duration: "10分",
         transport: "none",
         note: "旅のはじまり。鼓門は金沢の象徴 🎋",
+        link: "https://www.kanazawa-kankoukyoukai.or.jp/spot/detail_10050.html",
       },
       {
         id: "d1-02",
@@ -59,6 +60,7 @@ export const schedule: DaySchedule[] = [
         duration: "30〜60分",
         transport: "walk",
         note: "金沢の台所。海鮮の食べ歩きも楽しい 🦐",
+        link: "https://ohmicho-ichiba.com/",
       },
       {
         id: "d1-04",
@@ -168,6 +170,7 @@ export const schedule: DaySchedule[] = [
         duration: "75〜90分",
         transport: "machinori",
         note: "大人320円。日本三名園のひとつ。ゆっくり歩いて隅々まで 🌸",
+        link: "https://kenrokuen.or.jp/",
         isHighlight: true,
       },
       {
@@ -178,6 +181,7 @@ export const schedule: DaySchedule[] = [
         duration: "45分",
         transport: "walk",
         note: "野村家庭園は一見の価値あり 🏡",
+        link: "https://www.kanazawa-kankoukyoukai.or.jp/spot/detail_10195.html",
       },
       {
         id: "d2-05",
@@ -209,6 +213,7 @@ export const schedule: DaySchedule[] = [
         duration: "45分",
         transport: "walk",
         note: "江戸時代のお茶屋文化が残る町並み 🏮",
+        link: "https://www.kanazawa-kankoukyoukai.or.jp/spot/detail_10212.html",
       },
       {
         id: "d2-08",
@@ -243,6 +248,7 @@ export const schedule: DaySchedule[] = [
         duration: "30分",
         transport: "none",
         note: "金沢駅直結。治部煮・金箔スイーツ・ル ミュゼ ドゥ アッシュなど",
+        link: "https://www.100bangai.co.jp/",
       },
       {
         id: "d2-12",
