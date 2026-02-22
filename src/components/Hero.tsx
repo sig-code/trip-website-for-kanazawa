@@ -62,7 +62,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 1.2 }}
             className="mt-6 flex gap-3 justify-center flex-wrap"
           >
-            {["1泊2日"].map((tag) => (
+            {["1泊2日", "2人旅"].map((tag) => (
               <span
                 key={tag}
                 className="text-xs px-3 py-1 rounded-full border border-gold/40 text-gold/90 bg-gold/5"

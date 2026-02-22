@@ -26,7 +26,7 @@ export default function TodoList() {
         <span className="text-slate-400 text-xs">
           {doneCount} / {todos.length} 完了
         </span>
-          <div className="flex-1 mx-3 h-1.5 bg-slate-200 rounded-full overflow-hidden">
+        <div className="flex-1 mx-3 h-1.5 bg-slate-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-linear-to-r from-gold to-gold-light rounded-full transition-all duration-500"
             style={{ width: `${(doneCount / todos.length) * 100}%` }}
